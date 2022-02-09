@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalletStudio", "BalletStudio\BalletStudio.csproj", "{BACBDAED-C597-4086-A6DE-7719EBD5A200}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BACBDAED-C597-4086-A6DE-7719EBD5A200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACBDAED-C597-4086-A6DE-7719EBD5A200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACBDAED-C597-4086-A6DE-7719EBD5A200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACBDAED-C597-4086-A6DE-7719EBD5A200}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0780B99-8846-4999-A34A-18C5827AAA82}
+	EndGlobalSection
+EndGlobal
