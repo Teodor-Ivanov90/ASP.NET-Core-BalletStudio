@@ -1,4 +1,5 @@
 using BalletStudio.Data;
+using BalletStudio.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -21,7 +22,7 @@ namespace BalletStudio
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<BalletStudioDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
@@ -30,7 +31,7 @@ namespace BalletStudio
 
             services
                 .AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<BalletStudioDbContext>();
 
             services
                 .AddControllersWithViews();
@@ -48,6 +49,8 @@ namespace BalletStudio
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            app.PrepareDatabase();
 
             app.UseHttpsRedirection()
                 .UseStaticFiles()

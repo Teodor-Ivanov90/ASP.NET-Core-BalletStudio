@@ -1,0 +1,39 @@
+﻿@model AddDancerFormModel
+@{ 
+    ViewBag.Title = "Add Dancer";
+}
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <h2 class="heading-margin text-center">@ViewBag.Title</h2>
+
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Victoria, Yoana, etc...">
+                <span asp-validation-for="FirstName" class="small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Ivanova , Teodorova , etc...">
+                <span asp-validation-for="LastName" class="small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age"></label>
+                <input asp-for="Age" class="form-control" placeholder="Enter your age">
+                <span asp-validation-for="Age" class="small text-danger"></span>
+            </div>
+            <div class="form-group">
+            <label asp-for="TeacherId"></label>
+            <select asp-for="TeacherId" class="form-control">
+                @foreach (var teacher in Model.Teachers)
+                {
+                    <option value="@teacher.Id">@teacher.FullName</option>
+                }
+            </select>
+            <span asp-validation-for="TeacherId" class="small text-danger"></span>
+        </div>
+
+            <input class="btn btn-primary mt-3" type="submit" value="Save" />
+        </form>
+    </div>
+</div>
